@@ -1,0 +1,21 @@
+name: testing-push
+on: push
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Install Dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
+      - name: Test the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test #
+
