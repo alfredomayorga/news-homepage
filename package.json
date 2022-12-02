@@ -36,7 +36,7 @@
     "commitlint": "^17.2.0",
     "cypress": "^10.11.0",
     "husky": "^8.0.1",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.2.1"
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }
