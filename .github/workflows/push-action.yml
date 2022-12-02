@@ -3,7 +3,6 @@ on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node14.17.0-chrome87-ff82
     steps:
       - name: Get code
         uses: actions/checkout@v3
