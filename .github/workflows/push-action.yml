@@ -26,6 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Run install
+        if: steps.yarn-cache-dir-path.outputs.dir != true
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
@@ -56,6 +57,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Run install
+        if: steps.yarn-cache-dir-path.outputs.dir != true
         uses: borales/actions-yarn@v4
         with:
           cmd: install
