@@ -18,12 +18,28 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
+      - name: Run linter
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
       - name: Cypress run
         uses: cypress-io/github-action@v4.2.0 # use the explicit version number
         with:
           build: yarn build
           start: yarn start
-  lint:
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: news-homepage-image
+          path: |
+            node_modules
+            .next
+            public
+            package.json
+            next.config.js
+
+  build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -31,14 +47,13 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: install # will run `yarn install` command
-      - name: Run linter
+          cmd: install
+      - name: Build the app
         uses: borales/actions-yarn@v4
         with:
-          cmd: lint
-
+          cmd: yarn build
   deploy:
-    needs: [tests, lint]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get code
