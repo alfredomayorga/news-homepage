@@ -39,7 +39,7 @@ jobs:
             next.config.js
 
   build:
-    needs: test
+    needs: tests
     runs-on: ubuntu-latest
     steps:
       - name: Get code
