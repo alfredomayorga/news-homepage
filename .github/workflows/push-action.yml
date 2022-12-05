@@ -40,7 +40,7 @@ jobs:
       - name: Build the app
         uses: borales/actions-yarn@v4
         with:
-          cmd: yarn build
+          cmd: build
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
