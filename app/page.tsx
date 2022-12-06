@@ -7,7 +7,13 @@ const inter = Inter({
 })
 export default function Home() {
   return (
-    <div className={`${inter.variable}`}>
+    <div
+      className={`
+        ${inter.variable} 
+        lg:max-w-[1100px]
+        lg:mx-auto
+      `}
+    >
       <HeroSection />
     </div>
   )

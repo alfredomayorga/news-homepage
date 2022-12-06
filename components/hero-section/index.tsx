@@ -5,7 +5,17 @@ import HeroText from './HeroText'
 
 function HeroSection() {
   return (
-    <div className="flex flex-col">
+    <div
+      className="
+        flex 
+        flex-col
+        lg:grid
+        lg:grid-cols-3
+        lg:grid-rows-2
+        lg:max-h-[511px]
+        lg:gap-8
+      "
+    >
       <HeroImage />
       <HeroText />
       <HeroDescription />
