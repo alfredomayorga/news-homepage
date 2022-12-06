@@ -1,8 +1,13 @@
 import HeroSection from '../components/hero-section'
-
-export default async function Home() {
+import { Inter } from '@next/font/google'
+const inter = Inter({
+  weight: ['400', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+export default function Home() {
   return (
-    <div className="container p-4">
+    <div className={`${inter.variable} container p-4`}>
       <HeroSection />
     </div>
   )

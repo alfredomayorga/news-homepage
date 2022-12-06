@@ -4,6 +4,7 @@ function HeroImage() {
   return (
     <div className="relative">
       <Image
+        data-cy="hero-image"
         src={`/images/image-web-3-mobile.jpg`}
         alt="Hero Image"
         width={0}
