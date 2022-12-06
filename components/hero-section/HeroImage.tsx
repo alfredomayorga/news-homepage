@@ -9,6 +9,7 @@ function HeroImage() {
       className="
         relative
         lg:col-span-2
+        z-[-1]
       "
     >
       <Image
