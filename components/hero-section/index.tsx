@@ -1,3 +1,4 @@
+import NewSection from '../new-section'
 import HeroDescription from './HeroDescription'
 import HeroImage from './HeroImage'
 import HeroText from './HeroText'
@@ -8,6 +9,7 @@ function HeroSection() {
       <HeroImage />
       <HeroText />
       <HeroDescription />
+      <NewSection />
     </div>
   )
 }
