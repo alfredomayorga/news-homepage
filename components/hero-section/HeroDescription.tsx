@@ -24,6 +24,8 @@ function HeroDescription() {
           text-white
           text-[14px]
           tracking-widest
+          hover:bg-black
+          transition-all
         "
       >
         Read More

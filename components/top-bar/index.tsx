@@ -5,6 +5,7 @@ import MobileMenuButton from '../MobileMenuButton'
 import { useMobile } from '../../hooks/useMobile'
 import MobileMenu from './MobileMenu'
 import { useState } from 'react'
+import NavMenu from '../nav-menu'
 function TopBar() {
   const isMobile = useMobile()
   const [menuVisibility, setMenuVisibility] = useState<boolean>(false)
@@ -20,6 +21,8 @@ function TopBar() {
         justify-between
         mb-8 
         mt-4
+        lg:mt-20
+        lg:mb-14
       "
     >
       <Logo />
@@ -47,6 +50,7 @@ function TopBar() {
           ></div>
         </>
       )}
+      {!isMobile && <NavMenu />}
     </div>
   )
 }
