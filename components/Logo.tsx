@@ -3,6 +3,7 @@ import Image from 'next/image'
 function Logo() {
   return (
     <Image
+      data-cy="logo"
       src="/images/logo.svg"
       alt="News Homepage Brand"
       width={45}
