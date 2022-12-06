@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+body,
+html {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: '#FFFDFA';
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }

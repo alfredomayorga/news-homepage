@@ -7,7 +7,7 @@ const inter = Inter({
 })
 export default function Home() {
   return (
-    <div className={`${inter.variable} container p-4`}>
+    <div className={`${inter.variable}`}>
       <HeroSection />
     </div>
   )

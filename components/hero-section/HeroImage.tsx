@@ -9,7 +9,7 @@ function HeroImage() {
         alt="Hero Image"
         width={0}
         height={0}
-        className="min-h-[300px] object-cover"
+        className="min-h-[300px]"
         layout="responsive"
       />
     </div>
