@@ -1,15 +1,20 @@
-export default async function Home() {
+import HeroSection from '../components/hero-section'
+import { Inter } from '@next/font/google'
+const inter = Inter({
+  weight: ['400', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+export default function Home() {
   return (
-    <div>
-      <h1
-        className="
-          text-3xl 
-          underline
-        "
-      >
-        News Homepage
-      </h1>
-      <h2>Place to get all your news</h2>
+    <div
+      className={`
+        ${inter.variable} 
+        lg:max-w-[1100px]
+        lg:mx-auto
+      `}
+    >
+      <HeroSection />
     </div>
   )
 }
