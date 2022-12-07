@@ -1,6 +1,7 @@
 import HeroSection from '../components/hero-section'
 import { Inter } from '@next/font/google'
 import TopBar from '../components/top-bar'
+import SubCategories from '../components/sub-categories'
 const inter = Inter({
   weight: ['400', '700', '800'],
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function Home() {
     >
       <TopBar />
       <HeroSection />
+      <SubCategories />
     </div>
   )
 }

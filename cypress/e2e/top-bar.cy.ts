@@ -6,7 +6,7 @@ describe('Top Bar', () => {
     cy.getByData('logo').should('be.visible')
   })
   it('should have a mobile menu button if is mobile', () => {
-    cy.viewport(420, 540)
+    cy.viewport(350, 540)
     cy.getByData('mobile-menu-button').should('be.visible')
   })
 })
