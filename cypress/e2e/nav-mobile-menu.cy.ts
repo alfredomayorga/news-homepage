@@ -1,7 +1,7 @@
 describe('Navigation Menu', () => {
   before(() => {
-    cy.visit('/')
     cy.viewport(340, 540)
+    cy.visit('/')
   })
   it('should show the mobile menu', () => {
     cy.getByData('mobile-menu-button').click()
