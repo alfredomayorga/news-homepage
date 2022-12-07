@@ -16,7 +16,7 @@ function SubCategoryItem({
   return (
     <div
       data-cy="subcategory-item"
-      className="flex flex-row gap-8"
+      className="flex flex-row gap-8 lg:max-w-[350px] lg:gap-6"
     >
       <Image
         data-cy="subcategory-thumbnail"
@@ -42,6 +42,10 @@ function SubCategoryItem({
             text-black
             font-bold
             text-sm
+            lg:text-xs
+            lg:whitespace-nowrap
+            cursor-pointer
+            hover:text-red
           "
         >
           {title}

@@ -3,7 +3,15 @@ import SubCategoryItem from './SubCategoryItem'
 
 function SubCategories() {
   return (
-    <div className="flex flex-col my-16 gap-8">
+    <div
+      className="
+        flex 
+        flex-col
+        lg:flex-row 
+        my-16 
+        gap-8
+      "
+    >
       {data.subcategories.map((subcategory) => {
         return (
           <SubCategoryItem
